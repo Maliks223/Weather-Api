@@ -10,7 +10,7 @@ export class SayHello extends Component {
   render() {
     return (
       <div style={{ color: this.props.color, backgroundColor: "yellow" }}>
-        maliks {this.props.name}
+        Hello {this.props.name}
       </div>
     );
   }
