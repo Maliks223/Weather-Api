@@ -1,7 +1,7 @@
 :root{
 --bluecolor:#090b50;
 }
-/*  Search bar */
+
 html {
   box-sizing: border-box  ;
   font-family:Raleway;
@@ -151,5 +151,3 @@ main {
     }
    
   }
-
-
