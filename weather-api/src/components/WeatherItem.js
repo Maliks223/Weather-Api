@@ -1,17 +1,18 @@
-import React, { Component } from "react";
-import { render } from "react-dom";
+import React from 'react'
 
-export default class WeatherItem extends Component {
-  render() {
-    return <div>Heello</div>;
-  }
+import cloudy from "../img/weather-icons/mostlycloudy.svg"
+
+const WeatherItem = () => {
+  return (
+    
+     <div className="card">
+          <p>03:00</p>
+            <img src={cloudy} alt="sun icon" className="card-icon" placeholder="cloudy"></img>
+            <p>8&#0176;C</p>
+          </div>
+    
+  )
 }
-export class SayHello extends Component {
-  render() {
-    return (
-      <div style={{ color: this.props.color, backgroundColor: "yellow" }}>
-        Hello {this.props.name}
-      </div>
-    );
-  }
-}
+
+export default WeatherItem;
+
