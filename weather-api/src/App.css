@@ -1,25 +1,116 @@
-.app {
-  height: 100vh;
-  width: 100vw;
-  transition: background-color 1s ease-in;
+
+/*  Search bar */
+html {
+  padding: 0;
+  margin: 0;
+  font-family:Raleway;
 }
 
-.app__header,
-.app__main {
+.search {
+  color: white;
+  font-size: 18px;
+  font-weight: 900;
+  border: none;
+  background-color: transparent;
+  margin-left: 25px;
+  margin-right: 20px;
+  padding-bottom: 10px;
+}
+
+.search:focus {
+  border: none;
+  border-bottom: solid 2px #5879c7;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#header {
+  background-color: #759eda;
+  height: 100px;
   width: 100%;
+  display: flex;
+  align-items: center;
+  margin: -20px 0px;
+}
+
+.button {
+  background-color: #5879c7;
+  color: #090b50;
+  font-size: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+}
+
+/* Current weather */
+.icon {
+  width: 220px;
+  height: 220px;
+  margin-top: 50px;
+}
+
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  font-family: "Raleway", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #9ccef3;
 }
 
-/*  Search bar */
-
-/* Current weather */
-
-div {
-  border: 5px solid red;
+.below-image-text {
+  margin-top: 0;
+  color: white;
+  font-size: 25px;
+  font-weight: bolder;
+  margin-bottom: 30px;
 }
+
+.temp {
+  font-size: 28px;
+  font-weight: bold;
+  color: #090b50;
+  padding: 0 20px;
+}
+
+.temp-range {
+  font-size: 25px;
+  color: #090b50;
+}
+
+.property {
+  font-size: 20px;
+  font-weight: bold;
+  color: #090b50;
+  padding: 0 20px;
+}
+
+.value {
+  font-size: 20px;
+  color: #090b50;
+}
+
+.cards {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: #113956;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+.card-icon {
+  width: 100px;
+  padding: 25px 0;
+}
+
