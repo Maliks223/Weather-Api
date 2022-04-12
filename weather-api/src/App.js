@@ -26,7 +26,7 @@ const App = () => {
         humidity={nowData.main.humidity}
         pressure={nowData.main.pressure}
         />
-        <WeatherTime Hdata={hoursData}/>
+        <WeatherTime Hdata={hoursDatamu}/>
       </main>
     </div>
     
