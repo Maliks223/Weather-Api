@@ -8,7 +8,7 @@ const LiveWeather = (props) => {
         <p className="below-image-text"> {props.text} </p>
         <p className="container">
           <span className="temp"> Temperature</span>
-          <span className="temp-range">{props.minTemp}&#0176; to {props.maxTemp}&#0176;C</span>
+          <span className="temp-range">{Math.round(props.minTemp-273.15)}&#0176; to {Math.round(props.maxTemp-273.15)}&#0176;C</span>
         </p>
         <p className="container">
           <span className="property">Humidity </span>

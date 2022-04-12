@@ -5,6 +5,8 @@
   html {
     box-sizing: border-box  ;
     font-family:Raleway;
+    margin: 0;
+    padding: 0;
   }
   
   .search {
@@ -61,7 +63,6 @@
     align-items: center;
     background-color: #9ccef3;
     margin: 0%;
-    height: 100%;
   }
   
   .below-image-text {
@@ -103,15 +104,16 @@
     flex-wrap: wrap;
     justify-content: center;
     color: #113956;
+    
   }
   
   .card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px;
+    padding: 30px; 
+    padding-bottom: 222px;
   }
-  
   .card-icon {
     width: 100px;
     padding: 25px 0;
