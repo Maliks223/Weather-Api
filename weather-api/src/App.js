@@ -10,7 +10,7 @@ const App = () => {
     <div id="wrapper">
     
       <Search/>
-      <main>""
+      <main>
       <LiveWeather/>
       <WeatherTime/>
       </main>
@@ -18,4 +18,4 @@ const App = () => {
   );
 };
 
-export default App;""
+export default App;
