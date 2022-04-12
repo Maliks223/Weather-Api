@@ -5,16 +5,19 @@ import cloudy from "../img/weather-icons/mostlycloudy.svg";
 import clear from "../img/weather-icons/clear.svg";
 
 
-const WeatherTime = () => {
+const WeatherTime = (props) => {
+
+    const hoursArray = props.Hdata.map((section)=>{
+        return <WeatherItem key={section.dt} hour={section.dt_txt.split(' ')[1].slice(0,5)}
+        image={cloudy} temperature={section.main.temp}/>
+    })
+    
+        
+    
     return(
         <div className="cards">
-         <WeatherItem hour="3:00" image={cloudy}  temperature="8"/>
-         <WeatherItem hour="6:00" image={cloudy}   temperature="9"/>
-         <WeatherItem hour="9:00" image={clear}   temperature="14"/>
-         <WeatherItem hour="12:00" image={clear}  temperature="17"/>
-         <WeatherItem hour="15:00" image={clear}  temperature="18"/>
-         <WeatherItem hour="18:00" image={clear}  temperature="16"/>
-         <WeatherItem hour="21:00" image={cloudy}  temperature="13"/>
+            {hoursArray}
+         {}
         </div>
         )
   }
