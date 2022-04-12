@@ -5,7 +5,7 @@ import cloudy from "../img/weather-icons/mostlycloudy.svg";
 import clear from "../img/weather-icons/clear.svg";
 
 
-const WeatherTime = () => {
+const WeatherTime = (props) => {
     return(
         <div className="cards">
          <WeatherItem hour="3:00" image={cloudy}  temperature="8"/>
