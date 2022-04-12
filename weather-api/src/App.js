@@ -15,6 +15,7 @@ const App = () => {
         <WeatherTime/>
       </main>
     </div>
+    
   );
 };
 

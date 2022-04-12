@@ -19,4 +19,5 @@ const LiveWeather = (props) => {
     </main>
   )
 }
+
 export default LiveWeather;
