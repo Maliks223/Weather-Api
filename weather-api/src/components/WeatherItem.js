@@ -10,8 +10,7 @@ const WeatherItem = () => {
             <img src={cloudy} alt="sun icon" className="card-icon" placeholder="cloudy"></img>
             <p>8&#0176;C</p>
           </div>
-    
-  )
+     )
 }
 
 export default WeatherItem;
