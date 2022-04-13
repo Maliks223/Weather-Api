@@ -42,7 +42,7 @@ const WeatherTime = (props) => {
 
     const hoursArray = props.Hdata.map((section)=>{
         return <WeatherItem key={section.dt} hour={section.dt_txt.split(' ')[1].slice(0,5)}
-        image={findSrc(section.weather[0].id)} temperature={section.main.temp}/>
+        image={findSrc(section.weather[0].id)} temperature={Math.floor(section.main.temp)}/>
     })
     
         

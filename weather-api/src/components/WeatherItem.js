@@ -39,7 +39,7 @@ const WeatherItem = (props) => {
     <div className="card">
           <p>{props.hour}</p>
             <img src={props.image} alt="sun icon" className="card-icon"></img>
-            <p>{Math.round(props.temperature-273.15)}&#0176;C</p>
+            <p>{props.temperature}&#0176;C</p>
           </div>
   )
 }
