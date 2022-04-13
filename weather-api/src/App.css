@@ -104,6 +104,7 @@
     flex-wrap: wrap;
     justify-content: center;
     color: #113956;
+    margin-bottom: 143px;
     
   }
   
@@ -135,6 +136,9 @@
     .search{
       transform: scale(0.8);
     }
+    main {
+      transform: scale(0.9);
+    }
   }
    
   @media (max-width:280px){
@@ -151,7 +155,7 @@
         right: 15%;
         transform: scale(0.6);
       }
-     
+    
     }
   
   
