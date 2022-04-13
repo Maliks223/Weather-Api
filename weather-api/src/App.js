@@ -19,11 +19,11 @@ import fog from "./img/weather-icons/fog.svg";
 
 const App = () => {
 
- const nowData = fakeWeatherData.list[0];
+//  const nowData = fakeWeatherData.list[0];
   const hoursData = [];
-  for(let i=1; i<=7; i++){
-    hoursData.push(fakeWeatherData.list[i]);
-  }
+  // for(let i=1; i<=7; i++){
+  //   hoursData.push(fakeWeatherData.list[i]);
+  // }
   const id = fakeWeatherData.list[0].weather[0].id;
   
   const findSrc =(id) => {
@@ -50,36 +50,37 @@ const App = () => {
   else { return mostlycloudy }
   }
 
-  const callApi = async () => {
-    if(inputVal === "") return;
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${inputVal}&cnt=8&units=metric&appid=402eb8aeb1f6d523ecb76859e056a1ef`)
+  const callApi = async (city) => {
+    if(city === "") return;
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&cnt=8&units=metric&appid=402eb8aeb1f6d523ecb76859e056a1ef`)
     const result = await response.json();
-    console.log(result);
+    // console.log("result : ");
+    // console.log(result);
     if(result.cod === '404') {
       alert(result.message);
-      return;
     } else {
       setList(result.list)
+      // console.log("List: ");
+      // console.log(list);
     }
   }
 
-  const [inputVal, setInputVal] = useState('');
-  const [list, setList] = useState(fakeWeatherData.list[0]);
-  console.log(list);
+  // const [inputVal, setInputVal] = useState('beirut');
+  const [list, setList] = useState(null);
 
     return (
       <div id="wrapper">
-        <Search callApi={callApi} inputVal={inputVal} setInputVal={setInputVal}/>
+        <Search callApi={(city) => callApi(city)} />
         <main>
-          <LiveWeather 
-          text={list.weather[0].description}
-          minTemp={list.main.temp_min}
-          maxTemp={list.main.temp_max}
-          humidity={list.main.humidity}
-          pressure={list.main.pressure}
+          {list && <LiveWeather 
+          text={list[0].weather[0].description}
+          minTemp={list[0].main.temp_min}
+          maxTemp={list[0].main.temp_max}
+          humidity={list[0].main.humidity}
+          pressure={list[0].main.pressure}
           iconSrc = {findSrc(fakeWeatherData.list[0].weather[0].id)}
-          />
-          <WeatherTime Hdata={hoursData}/>
+          />}
+          {list && list.map((item, index) => index !== 0 && hoursData.push(item)) && <WeatherTime Hdata={hoursData}/>}
         </main>
       </div>
       
