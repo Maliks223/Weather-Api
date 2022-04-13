@@ -1,5 +1,6 @@
 import React from "react";
 
+
 import WeatherItem from "./WeatherItem";
 
 import clear from "../img/weather-icons/clear.svg";
