@@ -1,10 +1,10 @@
 import React from "react";
-import cloudy from "../img/weather-icons/mostlycloudy.svg";
+
 
 const LiveWeather = (props) => {
   return(
     <main>
-    <img src={cloudy} alt="Sun icon" className="icon"></img>
+    <img src={props.iconSrc} alt="Sun icon" className="icon"></img>
         <p className="below-image-text"> {props.text} </p>
         <p className="container">
           <span className="temp"> Temperature</span>
