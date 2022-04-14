@@ -1,17 +1,17 @@
-import React, { Component } from "react";
-import { render } from "react-dom";
+import React from "react";
 
-export default class WeatherItem extends Component {
-  render() {
-    return <div>Heello</div>;
-  }
+
+const WeatherItem = (props) => {
+  return(
+    
+    <div className="card">
+          <p>{props.hour}</p>
+            <img src={props.image} alt="sun icon" className="card-icon"></img>
+            <p>{props.temperature}&#0176;C</p>
+          </div>
+  )
 }
-export class SayHello extends Component {
-  render() {
-    return (
-      <div style={{ color: this.props.color, backgroundColor: "yellow" }}>
-        Hello {this.props.name}
-      </div>
-    );
-  }
-}
+
+ export default WeatherItem;
+
+
